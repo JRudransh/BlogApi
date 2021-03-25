@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'tj6$11jo%7xc24mz3ajo)j&n8$+^%@e#k71y2l4dy7^=2v+co1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bhaskaruprety.pythonanywhere.com', 'localhost', '127.0.0.1:8000']
 
 # Application definition
 
