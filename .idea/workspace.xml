@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc9e2b7-81f5-4666-b3ec-02e635972b3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -83,7 +84,10 @@
       <workItem from="1615852121556" duration="7027000" />
       <workItem from="1615891739970" duration="2652000" />
       <workItem from="1616067682331" duration="2895000" />
-      <workItem from="1616157320814" duration="5060000" />
+      <workItem from="1616157320814" duration="5798000" />
+      <workItem from="1616246182397" duration="533000" />
+      <workItem from="1616675753231" duration="301000" />
+      <workItem from="1616676418254" duration="980000" />
     </task>
     <servers />
   </component>
