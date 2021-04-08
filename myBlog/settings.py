@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'blog',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'myBlog.urls'
@@ -148,3 +150,6 @@ CKEDITOR_CONFIGS = {
 
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
+CORS_ORIGIN_ALLOW_ALL = True
