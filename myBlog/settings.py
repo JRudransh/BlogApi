@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'tj6$11jo%7xc24mz3ajo)j&n8$+^%@e#k71y2l4dy7^=2v+co1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['bhaskaruprety.pythonanywhere.com', 'localhost', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['bhaskaruprety.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -35,12 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     'ckeditor',
     'ckeditor_uploader',
     'blog',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,13 +48,15 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = ['https://bhaskaruprety.pythonanywhere.com', 'http://localhost:3000', 'http://localhost:8000', 'http://127.0.0.1:3000']
 ROOT_URLCONF = 'myBlog.urls'
 
 TEMPLATES = [
@@ -112,7 +114,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated'
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
     ],
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 'PAGE_SIZE': 10,
@@ -151,6 +153,3 @@ CKEDITOR_CONFIGS = {
 
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
-
-CORS_ORIGIN_ALLOW_ALL = True
