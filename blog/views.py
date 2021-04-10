@@ -23,6 +23,5 @@ class ArticleViewSet(viewsets.ModelViewSet):
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsOwnerOrReadOnly]
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
